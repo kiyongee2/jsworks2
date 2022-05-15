@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홀수/짝수를 판별하는 프로그램</title>
+</head>
+<body>
+    <script>
+        //입력
+        var num = prompt('숫자를 입력하세요', '1');
+
+        //조건 연산
+        //var result = (num % 2 === 0) ? '짝수입니다' : '홀수입니다';
+        if(num == null){
+            document.write("입력이 취소되었습니다.")
+        }else{
+            var result = (num % 2 === 0) ? '짝수입니다' : '홀수입니다';
+
+             //출력
+            document.write(num + "는(은) " + result);
+        }
+    
+       
+    </script>
+</body>
+</html>

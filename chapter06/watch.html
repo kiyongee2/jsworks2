@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>디지털 시계</title>
+  <style>
+    body{
+      text-align: center;
+      margin-top: 100px;
+    }
+    .access{
+      font-size: 2em;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h3>디지털 시계</h3>
+  <p id="display" class="access"></p>
+  <script>
+      setInterval(watch, 1000);  //1초마다 watch() 작동
+
+      function watch(){
+        var date = new Date();   //Date 객체의 인스턴스 생성
+        var now = date.toLocaleTimeString();
+        document.getElementById('display').innerHTML = now;
+      }
+  </script>
+</body>
+</html>

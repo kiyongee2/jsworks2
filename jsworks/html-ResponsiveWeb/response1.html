@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web</title>
+    <style>
+        #container{
+            width: 80%;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+        }
+        header{
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ccc;
+        }
+        section{
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ccc;
+        }
+        footer{
+            width: 100%;
+            border: 1px solid #ccc;
+        }
+        @media screen and (max-width:769px){
+            #container{
+                background-color: red;
+                color: white;
+            }
+        }
+        @media screen and (min-width:770px){
+            #container{
+                background-color: green;
+                color: white;
+            }
+        }
+        @media screen and (min-width:960px){
+            #container{
+                background-color: blue;
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Header</h1>
+        </header>
+        <section>
+            <h1>Section</h1>
+        </section>
+        <footer>
+            <h1>Footer</h1>
+        </footer>
+    </div>
+</body>
+</html>

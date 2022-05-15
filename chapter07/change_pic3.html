@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이벤트</title>
+</head>
+<body>
+    <div id="container">
+        <img src="images/cup-1.png" id="pic" >
+    </div>
+    <script>
+        var pic = document.getElementById("pic")
+        //setTimeout(changePic, 2000);
+
+        /*pic.onclick = changePic;
+
+        function changePic(){
+            pic.src = "images/cup-2.png";
+        }*/
+        
+        //실행 함수
+        pic.onclick = setTimeout(function(){
+            pic.src = "images/cup-2.png";
+        }, 2000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DOM event 객체</title>
+  <style>
+    #container {
+      width:300px;
+      margin:10px auto;
+    }
+  </style>
+</head>
+<body>
+	<div id="container">
+		<img src="images/easys-1.jpg" id="image">	
+  </div>
+  
+	<script>
+    let pic = document.querySelector('#image');
+
+    //이름 있는 함수로 정의
+    pic.addEventListener("mouseover", changePic);  //마우스 올림
+    pic.addEventListener("mouseout", originPic);   //마우스 벗어남
+    
+    function changePic() {
+      pic.src = "images/easys-2.jpg";
+    }
+
+    function originPic() {
+      pic.src = "images/easys-1.jpg";
+    }
+
+    //이름 없는 함수(익명 함수 or 실행 함수)
+   /*pic.addEventListener("mouseover", function(){
+      pic.src = "./images/easys-2.jpg";
+    });
+
+    pic.addEventListener("mouseout", function(){
+      pic.src = "./images/easys-1.jpg";
+    });*/
+	</script>
+</body>
+</html>

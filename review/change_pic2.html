@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="content">
+    <img src = "./images/coffee-blue.jpg" id="pic" alt="커피잔">
+  </div>
+  <script>
+    pic = document.getElementById('pic')
+    //addEventLister()의 실행 함수로 구현
+    pic.addEventListener("mouseover", function(){
+      pic.src = "./images/coffee-pink.jpg";
+    });
+
+    pic.addEventListener("mouseout", function(){
+      pic.src = "./images/coffee-blue.jpg";
+    });
+  </script>
+  
+    /* 일반 함수로 구현
+    pic.addEventListener("mouseover", change_pic1)
+    pic.addEventListener("mouseout", change_pic2)
+
+    function change_pic1(){
+      pic.src = "./images/coffee-pink.jpg";
+    }
+
+    function change_pic2(){
+      pic.src = "./images/coffee-blue.jpg";
+    }*/
+ 
+</body>
+</html>

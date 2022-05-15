@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container{
+      width: 300px;
+      height: 300px;
+      border: 2px solid #333;
+      border-radius: 50%;
+      margin: 50px auto;
+      text-align: center;
+      background-color: rgb(238, 250, 220);
+    }
+    h2{padding-top: 60px;}
+    p{line-height: 2;}
+    .accent{
+      color: red; 
+      font-size: 1.5em; 
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div id = "container">
+    <h2>지금까지 몇 일?</h2>
+    <p>입사 이후 <span id="day" class="accent"></span>일 지났습니다. <br>
+       수고하셨습니다. </p>
+  </div>
+  <script>
+    var now = new Date();
+    var day1 = new Date("2021-10-26");
+
+    var passedTime = now.getTime() - day1.getTime();
+    passedTime = Math.round(passedTime/(24*60*60*1000));
+    //document.write(passedTime);
+
+    document.getElementById('day').innerHTML = passedTime;
+  </script>
+</body>
+</html>

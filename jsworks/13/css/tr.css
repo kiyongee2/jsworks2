@@ -1,0 +1,32 @@
+#ex{
+    width: 500px;
+    height: 150px;
+    margin:0 auto;
+    border: 1px solid #aaa;
+    border-radius: 30px;
+    padding: 20px;
+}
+.box{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    background-color: #eee;
+    font-size: 12px;
+}
+.box p{
+    text-align: center;
+    padding-top: 10px;
+}
+#ex:hover .box{
+    transform: rotate(720deg);
+    margin-left: 320px;
+}
+#no-delay {
+    transition-duration: 3s;
+    border: 1px solid #ff6a00;
+}
+#delay{
+    transition-duration: 3s;
+    transition-delay: 1s;
+    border:1px solid #006aff
+}

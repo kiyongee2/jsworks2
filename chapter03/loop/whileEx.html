@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문 - while문</title>
+</head>
+<body>
+    <script>
+       
+       var i = 1;    //반복 변수
+       while(i <= 10){  //조건
+            document.write("안녕<br>");
+
+            //증감값
+            i++;
+       }
+       document.write("=======<br>");
+
+       //i = 0일때
+       let i = 0;
+       while(i <= 10){  //조건
+         //증감값
+         i++;
+        
+         document.write("안녕<br>");
+        }
+
+       let n = 1;
+       while(true){  //무한 반복
+            if(n > 10)
+                break;  //빠져나옴
+            document.write("안녕~" + n +"<br>");
+            n++;
+       }
+    </script>
+</body>
+</html>
