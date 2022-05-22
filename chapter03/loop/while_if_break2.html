@@ -8,19 +8,16 @@
 <body>
     <script>
         //1부터 더했을때 100이 넘는 자연수 구하기
-        let n = 0, sum_v = 0;
-
-        //연산
+        var n = 0, sum = 0;
+        
         while(true){  
-            n += 1;     //1증가
-            sum_v += n;   //누적 합계
-            if(sum_v > 100)
+            n += 1;
+            sum += n;
+            if(sum > 100)
                 break;
         }
-
         document.write("n =" + n + '<br>');
-        document.write("sum =" + sum_v + '<br>');
-        
+        document.write("sum = " + sum);
     </script>
 </body>
-</html>s
+</html>

@@ -1,7 +1,7 @@
 //자리 배치도
 let customNum = prompt("입장객은 몇 명인가요?"); //입장객 수
 let colNum = prompt("한 줄에 몇 명 앉나요?");   //열의 수
-let rowNum;       //행의 수
+let rowNum = 0;       //행의 수
 
 //입장객 수에 따른 행과 열 계산
 if(customNum % colNum === 0){

@@ -243,7 +243,6 @@ footer .foot_area .snslink li + li + li a {background-image:url(../img/ico_insta
 
 /* sub_page */
 .location_area {height:445px; background:url(../img/img_top2.jpg) no-repeat center bottom;}
-.location_area.about {}
 .location_area.customer {background-image:url(../img/img_top2.jpg);}
 .location_area.package {background-image:url(../img/img_top3.jpg);}
 .location_area.ticket {background-image:url(../img/img_top4.jpg);}
