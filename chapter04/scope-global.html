@@ -8,6 +8,7 @@
         body{
             font-size : 1.3em;
             text-align: center;
+            line-height: 2;
         }
     </style>
 </head>
@@ -21,12 +22,14 @@
             return x;
         }
 
-        let num = oneUp();  //1번 호출
-        document.write("num = " + num + "<br>");
+        oneUp();  //1번 호출
+        document.write("x = " + x + "<br>");
 
-        num = oneUp();  //2번 호출
-        document.write("num = " + num + "<br>");
-        document.write("x = " +  x);  //x는 프로그램이 종료되면 소멸.
+        oneUp();  //2번 호출
+        document.write("x = " + x + "<br>");
+
+        oneUp();  //3번 호출
+        document.write("x = " + x + "<br>");
     </script>
 </body>
 </html>
