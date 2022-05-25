@@ -4,41 +4,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>독서 챌린지</title>
   <style>
     #container{
       width: 300px;
       height: 300px;
-      border: 2px solid #333;
-      border-radius: 50%;
       margin: 50px auto;
+      border: 2px solid #222;
+      border-radius: 50%;
+      background-color: aliceblue;
       text-align: center;
-      background-color: rgb(238, 250, 220);
+      position: relative;
     }
-    h2{padding-top: 60px;}
-    p{line-height: 2;}
-    .accent{
-      color: red; 
-      font-size: 1.5em; 
-      font-weight: 700;
-    }
+    h2{position: absolute; left: 60px; top: 60px;}
+    p{position: absolute; left: 50px; top: 120px;;}
+    .accent{color:red; font-size: 1.5rem; font-weight: bold;}
   </style>
 </head>
 <body>
-  <div id = "container">
+  <div id="container">
     <h2>지금까지 몇 일?</h2>
-    <p>입사 이후 <span id="day" class="accent"></span>일 지났습니다. <br>
-       수고하셨습니다. </p>
+    <p>개강 이후 <span id="day" class="accent"></span>일 지났습니다.</p>
   </div>
+
   <script>
-    var now = new Date();
-    var day1 = new Date("2021-10-26");
+    let now = new Date();  //날짜 객체 생성
+    let firstDay = new Date("2022-5-9");
 
-    var passedTime = now.getTime() - day1.getTime();
-    passedTime = Math.round(passedTime/(24*60*60*1000));
-    //document.write(passedTime);
+    let passedTime = now.getTime() - firstDay.getTime();  //지난 시간 계산(밀리초)
+    console.log(passedTime + "ms");
 
-    document.getElementById('day').innerHTML = passedTime;
+    passedTime = Math.round(passedTime/(24*60*60*1000)); 
+    //밀리초(ms) ->초(s)로 환산후 일(day)로 환산.. 24시간 60분 60초 1000밀리초
+
+    document.querySelector("#day").innerText = passedTime;
+    //document.getElementById("day").innerHTML = passedTime;
   </script>
 </body>
 </html>

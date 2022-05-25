@@ -43,13 +43,15 @@
             for(let i = 0; i < winner.length; i++){
                 let num = Math.floor(Math.random() * member) + 1; //랜덤 번호
                 winner[i] = num;
+
+                //중복 제거
                 for(let j = 0; j < i; j++){
                     if(winner[j] == winner[i])
-                        i--;
+                        i--;  //중복 인덱스 삭제함
                 }
             }
 
-            //로또 번호 출력
+            //랜덤 번호 출력
             for(let i = 0; i < winner.length; i++){
                 document.write(winner[i] + "번, ");
             }

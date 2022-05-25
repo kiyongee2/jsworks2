@@ -8,23 +8,23 @@
   <style>
     body{
       text-align: center;
-      margin-top: 100px;
+      margin-top: 50px;
     }
     .access{
-      font-size: 2em;
+      font-size: 1.5em;
       color: blue;
     }
   </style>
 </head>
 <body>
-  <h3>디지털 시계</h3>
+  <h2>디지털 시계</h2>
   <p id="display" class="access"></p>
   <script>
       setInterval(watch, 1000);  //1초마다 watch() 작동
 
       function watch(){
-        var date = new Date();   //Date 객체의 인스턴스 생성
-        var now = date.toLocaleTimeString();
+        const DATE = new Date();   //Date 객체의 인스턴스 생성
+        let now = DATE.toLocaleTimeString();
         document.getElementById('display').innerHTML = now;
       }
   </script>

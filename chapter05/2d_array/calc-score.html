@@ -17,25 +17,25 @@
       [100, 90],
       [83, 35]
     ]
-    var kor_sum = 0;
-    var math_sum = 0;
-    var kor_avg, math_avg;
+    var korSum = 0;
+    var mathSum = 0;
+    var korAvg, mathAvg;
 
     // 과목별 점수 합계
     for(var i = 0; i < score.length; i++){
-      kor_sum += score[i][0];
-      math_sum += score[i][1];
+      korSum += score[i][0];
+      mathSum += score[i][1];
     }
 
     // 과목별 점수 평균
-    kor_avg = kor_sum / score.length;
-    math_avg = math_sum / score.length;
-    console.log(kor_avg);
+    korAvg = korSum / score.length;
+    mathAvg = mathSum / score.length;
+    console.log(korAvg);
 
-    document.write("국어 점수 합계 : " + kor_sum + '<br>');
-    document.write("수학 점수 합계 : " + math_sum + '<br>');
-    document.write("국어 점수 평균 : " + kor_avg + '<br>');
-    document.write("수학 점수 평균 : " + math_avg + '<br>');
+    document.write("국어 점수 합계 : " + korSum + '<br>');
+    document.write("수학 점수 합계 : " + mathSum + '<br>');
+    document.write("국어 점수 평균 : " + korAvg + '<br>');
+    document.write("수학 점수 평균 : " + mathAvg + '<br>');
   </script>
 </body>
 </html>
