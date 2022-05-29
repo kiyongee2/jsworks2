@@ -13,8 +13,8 @@ let robot = new Book("천개의 파랑", "천선란", 14000);
 //생성된 객체를 배열에 저장
 let bookList = [web, python, robot];
 
-//bookList[0] = web
-//bookList[0].title = "HTML5+CSS3+JavaScript"
+console.log(bookList[0]);
+console.log(bookList[0].title);
 
 document.write("<h1>책 제목으로 살펴보기</h1>");
 for(let i = 0; i < bookList.length; i++){
