@@ -19,26 +19,19 @@
 	<script>
     let pic = document.querySelector('#image');
 
-    //이름 있는 함수로 정의
-    pic.addEventListener("mouseover", changePic);  //마우스 올림
-    pic.addEventListener("mouseout", originPic);   //마우스 벗어남
-    
-    function changePic() {
-      pic.src = "images/easys-2.jpg";
-    }
+    //토글
+    let isOpen = false;
 
-    function originPic() {
-      pic.src = "images/easys-1.jpg";
-    }
-
-    //이름 없는 함수(익명 함수 or 실행 함수)
-   /*pic.addEventListener("mouseover", function(){
-      pic.src = "./images/easys-2.jpg";
+    pic.addEventListener("click", function(){
+      if(isOpen==false){
+        pic.src = "./images/easys-2.jpg";
+        isOpen = true;
+      }
+      else{
+        pic.src = "./images/easys-1.jpg";
+        isOpen = false;
+      }
     });
-
-    pic.addEventListener("mouseout", function(){
-      pic.src = "./images/easys-1.jpg";
-    });*/
 	</script>
 </body>
 </html>

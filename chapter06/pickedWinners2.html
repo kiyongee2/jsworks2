@@ -45,10 +45,21 @@
                 winner[i] = pickedOne;  //당첨 번호를 배열에 저장
                 for(let j = 0; j < i; j++){
                     if(winner[j] == winner[i] ){
-                        j--;       //이전 인덱스의 값과 일치하면 인덱스 1감소
+                        i--;       //이전 인덱스의 값과 일치하면 인덱스 1감소
                     }
                 }
             }
+            /*
+              예)응모자가 20명인 경우
+              i=0, winner[0]=5,   j=0, false
+              i=1, winner[1]=20,  j=0, winner[0]=5, j=1, false
+              i=2, winner[2]=11,  j=0, winner[0]=5, j=1, winner[1]=20
+              i=3, winner[3]=11,  j=0, winner[0]=5, j=1, winner[1]=20, j=2, winner[2]=11(중복 발생)
+                                  i를 1감소하여 다시 winner[3]을 추첨
+              i=3, winner[3]=7    j=0, winner[0]=5, j=1, winner[1]=20, j=2, winner[2]=11,
+              i=4, winner[4]=16   j=0, winner[0]=5, j=1, winner[1]=20, j=2, winner[2]=11, winner[3]=7
+              winner = [5, 20, 11, 7, 16]
+            */
 
             //로또 번호 출력
             for(let i = 0; i < winner.length; i++){

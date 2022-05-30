@@ -1,11 +1,17 @@
-#container{
-    width: 600px;
-    margin: 0 auto;
+#container{width: 600px; margin: 0 auto;}
+.small{width: 60px; height: 60px;}
+#small-pic{margin: 10px 5px;}
+#prod-pic{
+    float: left;
+    margin: 20px 20px auto 10px;;
 }
-/* .small{
-    width: 60px;
-    height: 60px;
+#desc{
+    width: 300px; float: left;
+    padding-top: 20px;
+    margin-bottom: 50px;
 }
-#small-pic{
-    margin: 20px 5px;
-} */
+hr{clear: both;}
+#desc ul{list-style: none;}
+#desc li{line-height: 1.8;}
+#desc button{margin: 20px 5px; width: 100%; padding: 10px}
+#desc a{text-decoration: none; color: blue; padding-left: 40px;}

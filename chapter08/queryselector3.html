@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        //setArrribute(속성, 속성값) 사용
+        function myFunction() {
+            document.querySelector('.input').setAttribute("type", "button"); 
+        }
+    </script>
 </head>
 <body>
     <input type="text" value="OK" class="input">
@@ -13,11 +19,6 @@
 
     <button onclick="myFunction()">Try it</button>
 
-    <script>
-        //setArrribute(속성, 속성값) 사용
-        function myFunction() {
-            document.querySelector('.input').setAttribute("type", "button"); 
-        }
-    </script>
+    
 </body>
 </html>

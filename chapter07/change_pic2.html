@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마우스 이벤트</title>
-</head>
-<body>
-    <div id="container">
-        <img src="images/cup-1.png" onclick="changePic()" id="pic">
-    </div>
-    
     <script>
         //실행 함수
         function changePic(){
             let pic = document.getElementById("pic");
 
+            // setTimeout(function(){
+            //     pic.src = "images/cup-2.png";
+            // }, 1000);
             setTimeout(function(){
-                pic.src = "images/cup-2.png";
-            }, 1000);
+                pic.src = "./images/cup-2.png";
+            })
         }
     </script>
+</head>
+<body>
+    <div id="container">
+        <img src="images/cup-1.png" onclick="changePic()" id="pic">
+    </div>
 </body>
 </html>
