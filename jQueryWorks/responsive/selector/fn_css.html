@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 연결</title>
+    <style>
+        * {margin: 5px;}
+    </style>
+    <!-- <script src="js/jquery-3.6.0.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $("p").css("border", "4px solid red")
+            $(".logo").css("border", "4px solid yellow");
+            $("div.util").css("border", "4px solid pink");
+            $("#gnb > ul > li").css("border", "4px solid green");
+            $("#gnb > ul").css("border", "4px solid blue");
+            $("#visual + #content").css("border", "4px solid navy")
+        })
+    </script>
+</head>
+<body>
+    <header id="header">
+        <div class="logo">로고</div>
+        <div class="util">회원가입</div>
+        <nav id="gnb">
+            <ul>
+                <li>메뉴1
+                    <ul>
+                        <li>메뉴1_1</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="visual">
+            <p>비주얼</p>
+        </div>
+        <div id="content">
+            <div class="left">왼쪽</div>
+            <div class="right>
+                <div class="util">오른쪽</div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

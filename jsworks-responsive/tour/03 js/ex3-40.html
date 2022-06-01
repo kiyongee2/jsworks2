@@ -11,7 +11,8 @@
             date: dateObj.getDate(),
             hours: dateObj.getHours(),
             minutes: dateObj.getMinutes(),
-            nowDate : dateObj.toUTCString()
+            // nowDate : dateObj.toUTCString()
+            nowDate : dateObj.toLocaleString()
         }
         for(var i in dateInfo) {
             console.log(i + ':' + dateInfo[i]);

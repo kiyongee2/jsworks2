@@ -21,9 +21,11 @@
         window.onload = function() {
             var a = document.getElementById('outer');
             var b = document.getElementById('inner');
+
             outer.onclick = function() {
                 alert('부모 이벤트');
             };
+
             inner.onclick = function(event) {
                 alert('자식 이벤트');
                 // event.stopPropagation();

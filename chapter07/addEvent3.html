@@ -13,23 +13,23 @@
 </head>
 <body>
 	<div id="container">
-		<img src="images/easys-1.jpg" id="image">	
+		<img src="images/easys-1.jpg" id="pic">	
   </div>
   
 	<script>
-    let pic = document.querySelector('#image');
+    let pic = document.querySelector('#pic');
 
     //토글
-    let isOpen = false;
+    let sw = true;
 
     pic.addEventListener("click", function(){
-      if(isOpen==false){
+      if(sw == true){
         pic.src = "./images/easys-2.jpg";
-        isOpen = true;
+        sw = false;
       }
       else{
         pic.src = "./images/easys-1.jpg";
-        isOpen = false;
+        sw = true;
       }
     });
 	</script>

@@ -19,17 +19,18 @@
         <h2>인사하기</h2>
         <h3 id="demo"></h3>
     </section>
+    
     <script>
         let message = ["생일 축하해!!", "고맙습니다.", "오늘도 좋은 하루!!"];
-        let m_idx = 0;  //message 인덱스
+        let msgIdx = 0;  //message 인덱스
        
         myGreeting();   //함수 호출
        
         function myGreeting() {
-            document.getElementById("demo").innerHTML = message[m_idx];
-            m_idx++;  //1 증가시킴
-            if(m_idx === message.length)
-                m_idx = 0;
+            document.getElementById("demo").innerHTML = message[msgIdx];
+            msgIdx++;  //1 증가시킴
+            if(msgIdx === message.length)
+                msgIdx = 0;
             setTimeout(myGreeting, 3000); //콜백 함수
         }
     </script>

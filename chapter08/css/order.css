@@ -1,8 +1,5 @@
 /* 너비 500px 가운데 정렬 */
-#container{
-    width: 500px;
-    margin: 30px auto;
-}
+#container{width: 500px;margin: 30px auto;}
 /* 필드셋 간격 조정 */
 fieldset{
     margin-bottom: 30px;

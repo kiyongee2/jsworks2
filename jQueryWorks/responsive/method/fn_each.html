@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 관련 메서드</title>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            var city = ["서울", "대전", "광주", "부산"];
+            $.each(city, function(index, value){
+                console.log(index + ": " + value);
+            });
+            var subject ={
+                subject: "html",
+                grade: 1,
+                days: 20
+            };
+            $.each(subject, function(key, value){
+                console.log(key + ":" + value);
+            });
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

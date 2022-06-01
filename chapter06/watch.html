@@ -11,7 +11,7 @@
       margin-top: 50px;
     }
     .access{
-      font-size: 1.5em;
+      font-size: 1.2em;
       color: blue;
     }
   </style>
@@ -19,13 +19,18 @@
 <body>
   <h2>디지털 시계</h2>
   <p id="display" class="access"></p>
+  <button onclick="myStop()">중지</button>
   <script>
-      setInterval(watch, 1000);  //1초마다 watch() 작동
+      let timer = setInterval(watch, 1000);  //1초마다 watch() 작동
 
       function watch(){
-        const DATE = new Date();   //Date 객체의 인스턴스 생성
-        let now = DATE.toLocaleTimeString();
+        const date = new Date();   //Date 객체의 인스턴스 생성
+        let now = date.toLocaleTimeString();
         document.getElementById('display').innerHTML = now;
+      }
+
+      function myStop(){
+        clearInterval(timer);
       }
   </script>
 </body>

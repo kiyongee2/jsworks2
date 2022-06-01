@@ -15,6 +15,7 @@
         window.onload = function() {
             var bt = document.getElementById('bt');
             var area = document.getElementById('area');
+            
             bt.onclick = function(event) {
                 console.log(event.target);
                 console.log(event.type);    
@@ -23,6 +24,7 @@
                 console.log(event.screenX);
                 console.log(event.screenY);                
             };
+
             area.onmousedown = function(event) {
                 console.log(event.button);
             };

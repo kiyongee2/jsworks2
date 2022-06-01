@@ -20,18 +20,19 @@
         <h2>커피의 세계</h2>
         <img src="images/coffee-pink.jpg" id="pic">
     </section>
+
     <script>
         let picture = ["images/coffee-blue.jpg", "images/coffee-gray.jpg", 
                        "images/coffee-pink.jpg"]
-        let idx = 0;
+        let picIdx = 0;
        
         showSlide(); 
        
         function showSlide() {
-            document.getElementById("pic").src =  picture[idx];
-            idx++;
-            if(idx === picture.length)
-                idx = 0;
+            document.getElementById("pic").src =  picture[picIdx];
+            picIdx++;
+            if(picIdx === picture.length)
+                picIdx = 0;
 
             setTimeout(showSlide, 3000); //콜백 함수
         }
