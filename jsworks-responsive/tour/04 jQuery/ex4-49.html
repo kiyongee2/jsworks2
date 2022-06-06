@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">    
+    <meta charset="UTF-8">   
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>swiper</title>    
     <style>
         * {
@@ -37,13 +38,38 @@
             line-height: 100px;
         }
     </style>
-    <script src="jquery-3.3.1.min.js"></script>    
+    <script src="jquery-3.3.1.min.js"></script>   
+    <link rel="stylesheet" href="swiper.min.css"> 
 </head>
 <body>
     <header>헤더</header>
-    <div class="visual">        
+    <div class="visual">    
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#"><img src="visual1.jpg" alt="HTML"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="visual2.jpg" alt="HTML"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="visual3.jpg" alt="HTML"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="visual4.jpg" alt="HTML"></a>
+                </div>
+            </div>
+        </div>    
     </div>
     <section class="content">콘텐츠</section>
-    <footer>푸터</footer>    
+    <footer>푸터</footer>   
+    <script src="swiper.min.js"></script> 
+    <script>
+        let swiper = new Swiper('.swiper-container', {
+            pagination:{
+                el: '.swiper-pagination'
+            }
+        });
+    </script>
 </body>
 </html>

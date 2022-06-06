@@ -50,8 +50,10 @@
     <script src="jquery-3.3.1.min.js"></script>
     <script>
         $(document).ready(function() {            
-            $("#m_menu  a.m").click(function() {               
+            $("#m_menu a.m").click(function() {               
                 // 이부분에 코드를 작성합니다. 
+                $(this).next().addBack().toggleClass("on").end().find(".m, ul")
+                       .removeClass("on").parent().siblings().find(".m, ul").removeClass("on");
                 return false;
             });
         });
