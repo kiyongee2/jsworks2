@@ -16,6 +16,12 @@
             margin: 15px;
         }
     </style>
+    <script>
+        $(function(){
+            /* li태그 style 적용 */
+            $("span").parent().css({"color":"red", "border":"2px solid blue"});
+        });
+     </script>
 </head>
 <body>
     <div class="content">
@@ -24,15 +30,10 @@
                 <li>li (direct parent)
                     <span>span</span>
                 </li>
+                <li>li (parent)</li>
+                <li>li (parent)</li>
             </ul>   
         </div>
     </div>
-
-    <script>
-        $(function(){
-            /* li태그 style 적용 */
-            $("span").parent().css({"color":"red", "border":"2px solid blue"});
-        });
-     </script>
 </body>
 </html>
