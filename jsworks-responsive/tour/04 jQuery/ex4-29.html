@@ -8,11 +8,12 @@
         $(document).ready(function() {
             var detachDiv
             $("button:eq(0)").click(function() {
-                $("m1 a").removeAttr("href");
-                $("#m2").empty();
-                $("#m3").remove();
+                $("#m1 a").removeAttr("href");
+                // $("#m2").empty();
+                // $("#m3").remove();
                 detachDiv = $("#m4").detach();
             });
+
             $("button:eq(1)").click(function() {
                 detachDiv.insertAfter("#m2");
             });
@@ -20,7 +21,7 @@
     </script>
 </head>
 <body>
-    <div id="m1"><a href="#">링크</a></div>
+    <div id="m1"><a href="http://www.naver.com">링크</a></div>
     <div id="m2">
         <span>내용1</span>
     </div>
