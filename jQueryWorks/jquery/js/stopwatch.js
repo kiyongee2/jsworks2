@@ -2,23 +2,24 @@ let time = 0;
 let sw = true;
 
 $(document).ready(function(){
-  buttonEvt();
+  stopWatch();
 });
 
 function init(){
   document.getElementById("time").innerHTML = "00:00:00";
 }
 
-function buttonEvt(){
+//stopWatch 함수 
+function stopWatch(){
   let hour = 0, min = 0, sec = 0;
   let timer;
 
-  // start btn
+  // 재생 - play
   $("#startbtn").click(function(){
 
     if(sw){
-      $(".fa").css("color","#FAED7D")
-      this.style.color = "#4C4C4C";
+      $(".fa").css("color","#f60")
+      this.style.color = "#555";
       sw = false;
 
       if(time == 0){
@@ -48,25 +49,25 @@ function buttonEvt(){
         }
 
         document.getElementById("time").innerHTML = th + ":" + tm + ":" + ts;
-      }, 1000);
+      }, 1000); //setInterval() -> 1초로 설정
     }
   });
 
-  // pause btn
+  // 일시중지 - pause
   $("#pausebtn").click(function(){
     if(time != 0){
-      $(".fa").css("color","#FAED7D")
-      this.style.color = "#4C4C4C";
+      $(".fa").css("color","#f60")
+      this.style.color = "#555";
       clearInterval(timer);
       sw = true;
     }
   });
 
-  // stop btn
+  // 정지 - stop
   $("#stopbtn").click(function(){
     if(time != 0){
-      $(".fa").css("color","#FAED7D")
-      this.style.color = "#4C4C4C";
+      $(".fa").css("color","#f60")
+      this.style.color = "#555";
       clearInterval(timer);
       sw = true;
       time = 0;

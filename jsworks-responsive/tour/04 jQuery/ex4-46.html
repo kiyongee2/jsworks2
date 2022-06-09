@@ -17,10 +17,10 @@
     <script>
         $(document).ready(function() {
             $("button:eq(0)").click(function() {
-                $(".m1").slideToggle();
+                $(".m1").stop().slideToggle();
             });
             $("button:eq(1)").click(function() {
-                $(".m2").stop().slideToggle();
+                $(".m2").slideToggle();
             });
             $("button:eq(2)").click(function() {
                 $(".m3").animate({height : "toggle"}, 1000, "swing");
