@@ -7,6 +7,7 @@ body{
     justify-content: center;
  }
 .box{width: 200px; height: 200px;}
+.runBox{width: 200px; margin: 10px; text-align: center;}
 .timerBox{width: 200px; outline: 2px solid black;}
 .timerBox .time{
     font-size: 30pt;
@@ -14,9 +15,10 @@ body{
     text-align: center;
 }
 .btnBox{margin: 20px auto; text-align: center;}
-.btnBox .fa{
+.btnBox .fa-solid{
     margin: 0px 5px;
     font-size: 30pt;
     color: #ff6600;
     cursor: pointer;
 }
+

@@ -1,5 +1,6 @@
 let time = 0;
 let sw = true;
+let sw2 = true;
 
 $(document).ready(function(){
   stopWatch();
@@ -16,9 +17,8 @@ function stopWatch(){
 
   // 재생 - play
   $("#startbtn").click(function(){
-
     if(sw){
-      $(".fa").css("color","#f60")
+      $(".fa-solid").css("color","#f60")
       this.style.color = "#555";
       sw = false;
 
@@ -28,7 +28,7 @@ function stopWatch(){
 
       timer = setInterval(function(){
         time++;
-
+      
         min = Math.floor(time/60);
         hour = Math.floor(min/60);
         sec = time % 60;
@@ -47,8 +47,8 @@ function stopWatch(){
         if(ts < 10){
           ts = "0" + sec;
         }
-
         document.getElementById("time").innerHTML = th + ":" + tm + ":" + ts;
+        
       }, 1000); //setInterval() -> 1초로 설정
     }
   });
@@ -56,7 +56,7 @@ function stopWatch(){
   // 일시중지 - pause
   $("#pausebtn").click(function(){
     if(time != 0){
-      $(".fa").css("color","#f60")
+      $(".fa-solid").css("color","#f60")
       this.style.color = "#555";
       clearInterval(timer);
       sw = true;
@@ -66,7 +66,7 @@ function stopWatch(){
   // 정지 - stop
   $("#stopbtn").click(function(){
     if(time != 0){
-      $(".fa").css("color","#f60")
+      $(".fa-solid").css("color","#f60")
       this.style.color = "#555";
       clearInterval(timer);
       sw = true;

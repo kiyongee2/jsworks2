@@ -1,78 +1,56 @@
 
-let isOver = false;
-
-function goHide() {
-	for(var i = 1; i <= 4; i++){
-		if (!isOver) {
+$(document).ready( function() {
+	//fadeOut() 함수
+	function goHide() {
+		for(var i = 1; i <= 4; i++){
 			$('.gnb_depth2_' + i).stop().fadeOut('fast');
 		}
 	}
-}
 
-$(document).ready( function() {
+	//상단메뉴 마우스오버, 탭 클릭
 	$('.openAll1').mouseover(function(){
 		$('.gnb_depth2_1').fadeIn('fast');
-		isOver = true;
-	});	
-	$('.openAll1').focus(function(){
+	}).focus(function(){
 		$('.gnb_depth2_1').fadeIn('fast');
-		isOver = true;
-	});
-	$('.openAll1').mouseout(function(){
-		isOver = false;
-		setTimeout("goHide()",200);
+	}).mouseout(function(){
+		setTimeout(goHide, 300);
 	});	
 
 	$('.openAll2').mouseover(function(){
 		$('.gnb_depth2_2').fadeIn('fast');
-		isOver = true;
-	});	
-	$('.openAll2').focus(function(){
+	}).focus(function(){
 		$('.gnb_depth2_2').fadeIn('fast');
-		isOver = true;
-	});
-	$('.openAll2').mouseout(function(){
-		isOver = false;
-		setTimeout("goHide()",200);
+	}).mouseout(function(){
+		setTimeout(goHide, 300);
 	});	
 
 	$('.openAll3').mouseover(function(){
 		$('.gnb_depth2_3').fadeIn('fast');
-		isOver = true;
-	});	
-	$('.openAll3').focus(function(){
+	}).focus(function(){
 		$('.gnb_depth2_3').fadeIn('fast');
-		isOver = true;
-	});
-	$('.openAll3').mouseout(function(){
-		isOver = false;
-		setTimeout("goHide()",200);
+	}).mouseout(function(){
+		setTimeout(goHide, 300);
 	});	
 
 	$('.openAll4').mouseover(function(){
 		$('.gnb_depth2_4').fadeIn('fast');
-		isOver = true;
-	});	
-	$('.openAll4').focus(function(){
+	}).focus(function(){
 		$('.gnb_depth2_4').fadeIn('fast');
-		isOver = true;
+	}).mouseout(function(){
+		setTimeout(goHide, 300);
 	});
-	$('.openAll4').mouseout(function(){
-		isOver = false;
-		setTimeout("goHide()",200);
-	});	
 
 	//모바일 메뉴 띄움
 	$('.openMOgnb').click(function(){
-		$('header').addClass('on');
+		// $('header').addClass('on');
 		$('header .header_cont').slideDown('fast');
 		$('header .header_area .header_cont .closePop').show();			
-		$("body").bind('touchmove', function(e){e.preventDefault()});
+		// $("body").bind('touchmove', function(e){e.preventDefault()});
 	});
 	$('header .header_cont .closePop').click(function(){
 		$('.header_cont').slideUp('fast');
-		$('header').removeClass('on');
-		$("body").unbind('touchmove');
+		// $('header').removeClass('on');
+		// $("body").unbind('touchmove');
 	});
 
 });
